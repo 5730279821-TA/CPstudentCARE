@@ -2718,15 +2718,19 @@ function init_morris_charts() {
 
 	}
 
-	if ($('#graph_donut').length) {
+	if ($('#graph_donutY1').length) {
 
 		Morris.Donut({
-			element: 'graph_donut',
+			element: 'graph_donutY1',
 			data: [
-				{ label: 'Jam', value: 25 },
-				{ label: 'Frosted', value: 40 },
-				{ label: 'Custard', value: 25 },
-				{ label: 'Sugar', value: 10 }
+				{ label: 'A', value: 10 },
+				{ label: 'B+', value: 10},
+				{ label: 'B', value:  20},
+				{ label: 'C+', value:  20},
+				{ label: 'C', value:  30 },
+				{ label: 'D+', value: 6 },
+				{ label: 'D', value: 2 },
+				{ label: 'D', value: 2 }
 			],
 			colors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
 			formatter: function (y) {
@@ -2734,8 +2738,54 @@ function init_morris_charts() {
 			},
 			resize: true
 		});
-
 	}
+
+	if ($('#graph_donutY2').length) {
+
+		Morris.Donut({
+			element: 'graph_donutY2',
+			data: [
+				{ label: 'A', value: 10 },
+				{ label: 'B+', value: 10},
+				{ label: 'B', value:  25},
+				{ label: 'C+', value:  25},
+				{ label: 'C', value:  20 },
+				{ label: 'D+', value: 6 },
+				{ label: 'D', value: 2 },
+				{ label: 'D', value: 2 }
+			],
+			colors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+			formatter: function (y) {
+				return y + "%";
+			},
+			resize: true
+		});
+	}
+
+	if ($('#graph_donutY3').length) {
+
+		Morris.Donut({
+			element: 'graph_donutY3',
+			data: [
+				{ label: 'A', value: 10 },
+				{ label: 'B+', value: 10},
+				{ label: 'B', value:  20},
+				{ label: 'C+', value:  28},
+				{ label: 'C', value:  22 },
+				{ label: 'D+', value: 6 },
+				{ label: 'D', value: 2 },
+				{ label: 'D', value: 2 }
+			],
+			colors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+			formatter: function (y) {
+				return y + "%";
+			},
+			resize: true
+		});
+	}
+
+	
+	
 
 	if ($('#graph_line').length) {
 
